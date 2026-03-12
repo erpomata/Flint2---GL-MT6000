@@ -14,7 +14,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-
+          
+      - name: Configure Git
+        run: |
+          git config --global user.name "PG"
+          git config --global user.email "paolo.giammarco@gmail.com"
+    
       - name: Add upstream
         run: git remote add upstream https://github.com/pesa1234/MT6000_cust_build.git
 
